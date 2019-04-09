@@ -11,10 +11,10 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
+const { getByText } = render(<App/>);
 
 it('otherwise strikes get added up until 3', () => {
 
-  const { getByText } = render(<App/>);
 
   const button = getByText('Strike');
 
@@ -26,8 +26,6 @@ it('otherwise strikes get added up until 3', () => {
 });
 
 // it('adding 3 strikes sets strikes to 0', () => {
-  
-//   const { getByText } = render(<App/>);
 
 //   const button = getByText('Strike');
 
@@ -41,15 +39,28 @@ it('otherwise strikes get added up until 3', () => {
 
 
 
+it('Adding a 4th ball sets it to 0', () => {
+
+  const ball = getByText('Ball');
+
+  fireEvent.click(ball);
+  fireEvent.click(ball);
+  fireEvent.click(ball);
+  fireEvent.click(ball);
+  
+  getByText(`Balls: ${0}`)
+
+})
+
 // it('Balls add till 3', () => {
 
-//   const { getByText } = render(<App/>);
+//   const ball = getByText('Ball');
 
-//   const button = getByText('Ball');
-
-//   fireEvent.click(button);
-//   fireEvent.click(button);
+//   fireEvent.click(ball);
+//   fireEvent.click(ball);
+//   fireEvent.click(ball);
   
-//   getByText(/balls: 0/i)
+//   getByText(`Balls: ${3}`)
 
 // })
+
