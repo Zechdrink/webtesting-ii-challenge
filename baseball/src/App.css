@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid black;
+  border-top: none;
+}
+
+a {
+  padding: 10px 15px;
+  font-size: 20px;
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.appBody {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.display {
+  box-shadow: 1px 1px 5px green;
+  border: 3px groove black;
+  width: 350px;
+  color: white;
+  background-color: #333;
+  padding: 10px 0;
+
+}
+
+.dashboard {
+  padding: 15px 30px;
+}
+
+button {
+  width: 125px;
+  height: 75px;
+  margin: 2px;
+  font-size: 25px;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: #333;
+  color: white;
+  transition: 500ms ease;
+  box-shadow: 1px 1px 5px green;
+}
+
+button:hover {
+transform: scale(.95, .95)
+}
