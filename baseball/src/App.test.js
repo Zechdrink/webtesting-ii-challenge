@@ -13,17 +13,17 @@ it('renders without crashing', () => {
 
 const { getByText } = render(<App/>);
 
-it('otherwise strikes get added up until 3', () => {
+// it('otherwise strikes get added up until 3', () => {
 
 
-  const button = getByText('Strike');
+//   const button = getByText('Strike');
 
-  fireEvent.click(button);
-  fireEvent.click(button);
+//   fireEvent.click(button);
+//   fireEvent.click(button);
   
-  getByText(`Strikes: ${2}`);
+//   getByText(`Strikes: ${2}`);
 
-});
+// });
 
 // it('adding 3 strikes sets strikes to 0', () => {
 
@@ -64,3 +64,14 @@ it('Adding a 4th ball sets it to 0', () => {
 
 // })
 
+it('fouls add up to 2 strikes', () => {
+
+  const button  = getByText('Foul');
+
+  fireEvent.click(button);
+  fireEvent.click(button);
+  // fireEvent.click(button);
+  
+  getByText(`Strikes: ${2}`)
+
+})
